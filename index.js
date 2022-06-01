@@ -123,17 +123,31 @@ document.addEventListener("scroll", (e) => {
     circle.style.position = "absolute";
   }
 
-  // if (window.scrollY >= 2000) {
-  //
-  //   circle.style.transform = `translateX(${window.scrollY * 2 - 1600}px)`;
-  // } else {
-  //   circle.style.transform = "translateX(0)";
-  //   bodi.style.background = "black";
-  // }
+  if (window.scrollY >= 1828) {
+    parents.style.position = "fixed";
+    parents.style.top = "300px";
+    
+  } else {
+    parents.style.position = "absolute";
+    parents.style.top = "3000px";
+
+  }
 
   // if (window.scrollY > 1020){
   // }
   //   if (window.scrollY > 700){
   //   born.style.left = "400px";
   // }
+});
+
+anime({
+  targets: "#parents path",
+  strokeDashoffset: [anime.setDashoffset, 0],
+  easing: "easeInOutSine",
+  duration: 6000,
+  delay: function (el, i) {
+    return i * 10;
+  },
+  direction: "alternate",
+  loop: true,
 });

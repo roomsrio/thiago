@@ -164,8 +164,9 @@ h1 span {
   box-shadow: rgb(228, 206, 3) 0px 0px 50px 10px;
 }
 
-.parents {
-  
+#parents {
+  margin: 2rem;
   position: absolute;
-  top:  3000px;;
+  display: flex;
+  justify-content: center;
 }
