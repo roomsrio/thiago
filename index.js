@@ -1,5 +1,6 @@
 const title = document.querySelector("h1");
 const letters = [...document.querySelectorAll("h1 span")];
+let mother = true;
 
 // title.addEventListener("mouseenter", handleLetters);
 // title.addEventListener("mouseleave", handleLetters);
@@ -109,7 +110,7 @@ document.addEventListener("scroll", (e) => {
 
   if (window.scrollY > 1000) {
     bodi.style.background =
-      "linear-gradient(204deg, rgba(0,0,0,1) 10%, rgba(37,181,255,1) 30%)";
+      "linear-gradient(204deg, rgba(0,0,0,1) 15%, rgba(37,181,255,1) 25%)";
   }
   if (window.scrollY > 1300) {
     circle.style.top = "3px";
@@ -123,18 +124,25 @@ document.addEventListener("scroll", (e) => {
     circle.style.position = "absolute";
   }
 
-  if (window.scrollY >= 1828) {
+  if (window.scrollY >= 1710) {
     parents.style.position = "fixed";
     parents.style.top = "300px";
-    
   } else {
     parents.style.position = "absolute";
-    parents.style.top = "3000px";
-
+    parents.style.top = "1980px";
   }
 
-  // if (window.scrollY > 1020){
-  // }
+  if (window.scrollY > 2500) {
+    mother = false;
+    tatiana.style.position = "fixed";
+    tatiana.style.top = "0";
+    tatiana.style.width = "120vw";
+   
+  } else {
+    tatiana.style.left = "-15%";
+    tatiana.style.width = "28px";
+
+  }
   //   if (window.scrollY > 700){
   //   born.style.left = "400px";
   // }

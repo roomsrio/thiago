@@ -165,8 +165,17 @@ h1 span {
 }
 
 #parents {
+  top: 1980px;
   margin: 2rem;
   position: absolute;
   display: flex;
   justify-content: center;
+}
+
+#tatiana {
+  position: fixed;
+  left: -15%;
+  background: yellow;
+  height: 100vh;
+  transition: 2s;
 }
